@@ -1,0 +1,146 @@
+/* nav style*/
+.nav-link {
+  width: 136px;
+  height: 46px;
+}
+
+/* btn style */
+/* .btn-primary {
+  background-color: #ff7473;
+  border-color: #ff7473;
+  width: 50%;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  border-color: #ffc952;
+  background-color: #ffc952;
+} */
+
+.searchApt,
+.searchLocation {
+  background-color: #ff7473;
+  border-color: #ff7473;
+  font-size: 15pt;
+  width: 50%;
+}
+.searchApt:hover,
+.searchApt:focus,
+.searchLocation:hover,
+.searchLocation:focus {
+  border-color: #ffc952;
+  background-color: #ffc952;
+}
+.searchAptBtn {
+  background-color: #ff7473;
+  border-color: #ff7473;
+}
+.searchAptBtn:hover,
+.searchAptBtn:focus {
+  background-color: #ce5555;
+  border-color: #ce5555;
+}
+.btn-outline-primary,
+btn-medium {
+  border-color: #47b8e0;
+  background-color: #fff;
+}
+.btn-outline-primary {
+  color: #007bff;
+  border-color: #47b8e0;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  color: #fff;
+  border-color: #47b8e0;
+  background-color: #47b8e0;
+}
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.show > .btn-outline-primary.dropdown-toggle {
+  background-color: #47b8e0;
+  border-color: #47b8e0;
+}
+.registerAptBtn {
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 50px;
+  width: 60%;
+  background-color: #ff7473;
+  border-color: #ff7473;
+}
+.registerAptBtn:hover,
+.registerAptBtn:focus {
+  background-color: #ce5555;
+  border-color: #ce5555;
+}
+
+#writeArticle,
+.updateMyInfo {
+  margin-top: 10px;
+  margin-left: 10px;
+  background-color: #ff7473;
+  border-color: #ff7473;
+}
+
+#writeArticle:hover,
+#writeArticle:focus,
+.updateMyInfo:focus,
+.updateMyInfo:hover {
+  background-color: #ce5555;
+  border-color: #ce5555;
+}
+
+.deleteMyInfo {
+  margin-top: 10px;
+  margin-left: 10px;
+  border-color: #e02e2e;
+  background-color: #e02e2e;
+}
+
+.deleteMyInfo:hover {
+  border-color: #c24e4e;
+  background-color: #c24e4e;
+}
+#backToList {
+  margin-top: 10px;
+  margin-left: 10px;
+  border-color: #34314c;
+  background-color: #34314c;
+}
+
+#backToList:hover {
+  border-color: #24222c;
+  background-color: #24222c;
+}
+
+#reset {
+  background-color: #ff7473;
+  border-color: #ff7473;
+}
+
+#searchWordBtn {
+  margin-top: 20px;
+  width: 60%;
+  margin: auto;
+}
+
+.writeArticleBtn {
+  background-color: #ff7473;
+  border-color: #ff7473;
+  margin-bottom: 10px;
+}
+
+.writeArticleBtn:hover,
+.writeArticleBtn:focus {
+  background-color: #ce5555;
+  border-color: #ce5555;
+}
+
+.registCategory,
+.aptInfo {
+  text-align: center;
+}
+
+.detailArticleForm:disabled {
+  background-color: #ffffff;
+}

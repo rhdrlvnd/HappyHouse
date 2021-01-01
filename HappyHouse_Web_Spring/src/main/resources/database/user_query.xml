@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd"> 
+
+<mapper namespace="com.ssafy.happyhouse.model.dao.UserDao">
+
+    <insert id="register" parameterType="com.ssafy.happyhouse.model.UserDto">
+        insert into user (   user_id, user_name,   user_password,   user_email, phone, role ) 
+                     values (  #{user_id}, #{user_name}, #{user_password}, #{user_email}, #{phone}, 1 )
+    </insert>
+    
+    <select id="login" parameterType="com.ssafy.happyhouse.model.UserDto" resultType="com.ssafy.happyhouse.model.UserDto">
+		select *
+		from user
+		where user_id = #{user_id} and user_password = #{user_password}
+	</select>
+
+</mapper>

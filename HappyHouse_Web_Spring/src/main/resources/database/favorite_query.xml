@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.model.dao.FavoriteDao">
+
+    <select id="favoriteRankList" resultType="com.ssafy.happyhouse.model.HouseDealDto">
+        SELECT A.aptName, A.dong,  B.area, COUNT(C.user_no) as favorite
+            FROM houseinfo A, housedeal B, favorite C
+            WHERE A.house_no=B.house_no AND B.deal_no = C.deal_no
+            GROUP BY A.aptName, A.dong, B.area
+            ORDER BY COUNT(C.user_no) DESC
+    </select>
+    
+    <insert id="insert" parameterType="com.ssafy.happyhouse.model.FavoriteDto">
+        insert into favorite ( user_no, deal_no )
+               values ( #{user_no}, #{deal_no} )
+    </insert>
+</mapper>

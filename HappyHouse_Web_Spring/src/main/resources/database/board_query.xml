@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.ssafy.happyhouse.model.dao.BoardDao">
+
+	<select id="boardList" resultType="com.ssafy.happyhouse.model.BoardDto">
+		SELECT b.board_no as boardNo, u.user_id as userId, b.user_no as userNo,
+		b.title as title, b.content as content, b.time as time
+		FROM BOARD b, USER u
+		WHERE b.user_no = u.user_no
+		ORDER BY b.board_no DESC
+	</select>
+	
+<!-- 	<select id="boardListTotalCount" resultType="int">
+	SELECT COUNT(*) FROM BOARD
+	</select>
+	
+	<select id="boardListSearchWord" parameterType="map" resultType="com.ssafy.happyhouse.model.BoardDto">
+	SELECT b.BOARD_ID as boardId, b.USER_SEQ as userSeq, u.USER_NAME as userName,
+		u.USER_PROFILE_IMAGE_URL as userProfileImageUrl,
+		b.TITLE as title, b.CONTENT as content, b.REG_DT as regDt, b.READ_COUNT as readCOUNT
+		FROM BOARD b, USER u
+		WHERE b.USER_SEQ = u.USER_SEQ
+		AND b.TITLE LIKE CONCAT('%', #{searchWord} , '%')
+		ORDER BY b.BOARD_ID DESC
+		LIMIT #{limit} OFFSET #{offset}
+	</select>
+	
+	<select id="boardListSearchWordTotalCount"  parameterType="string" resultType="int">
+	SELECT COUNT(*)
+	FROM BOARD
+	WHERE TITLE LIKE CONCAT('%', #{searchWord}, '%')
+	</select> -->
+	
+	<insert id="boardInsert" parameterType="com.ssafy.happyhouse.model.BoardDto">
+	INSERT INTO BOARD ( user_no, title, content, time )
+				VALUES ( 6, #{title}, #{content}, now() )
+	</insert>
+	
+</mapper>

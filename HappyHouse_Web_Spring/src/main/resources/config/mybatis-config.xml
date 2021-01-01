@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"    "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+    <settings>
+        <setting name="callSettersOnNulls" value="true"/>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+    </settings>
+
+    <mappers>
+        <mapper resource="database/board_query.xml" />
+        <mapper resource="database/favorite_query.xml" />
+        <mapper resource="database/user_query.xml" />
+        <mapper resource="database/map_query.xml" />
+        <mapper resource="database/housedeal_query.xml" />
+    </mappers>
+</configuration>
